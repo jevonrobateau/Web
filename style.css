@@ -1,0 +1,858 @@
+/* =========================================
+   General Styles
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f7fb;
+    color: #1a1a1a;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   Header
+   ========================================= */
+
+.site-header {
+    background-color: #07111f;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.header-content {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.logo {
+    height: 70px;
+    object-fit: contain;
+    width: 70px;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.header-text h1 {
+    font-size: 30px;
+}
+
+.header-text p {
+    color: #b9c5d6;
+}
+
+
+/* =========================================
+   Navigation
+   ========================================= */
+
+.navigation {
+    background-color: #10233d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navigation a {
+    color: #ffffff;
+    display: block;
+    padding: 15px 25px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background-color: #1e4f83;
+}
+
+
+/* =========================================
+   Hero
+   ========================================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #07111f,
+        #163d63
+    );
+    color: #ffffff;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.welcome {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    display: block;
+}
+
+.hero-text > p:not(.welcome) {
+    color: #d5deea;
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+.hero-image {
+    flex: 0 0 350px;
+}
+
+.hero-image img {
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    height: 350px;
+    object-fit: cover;
+    width: 350px;
+}
+
+
+/* =========================================
+   Buttons
+   ========================================= */
+
+.button {
+    background-color: #1e70b7;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 22px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #15548b;
+    transform: translateY(-2px);
+}
+
+.center-button {
+    margin-top: 35px;
+    text-align: center;
+}
+
+
+/* =========================================
+   General Sections
+   ========================================= */
+
+.section-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 70px 20px;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-heading p {
+    color: #1e70b7;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+}
+
+
+/* =========================================
+   About
+   ========================================= */
+
+.about {
+    text-align: center;
+}
+
+.about p {
+    margin: 0 auto 15px;
+    max-width: 850px;
+}
+
+
+/* =========================================
+   Cards
+   ========================================= */
+
+.card-container {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   Project Section
+   ========================================= */
+
+.projects {
+    background-color: #e9eff6;
+    max-width: none;
+}
+
+.project-content {
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.project-content img {
+    border-radius: 10px;
+    height: 300px;
+    object-fit: cover;
+    width: 450px;
+}
+
+.project-content h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   Page Banner
+   ========================================= */
+
+.page-banner {
+    background-color: #07111f;
+    color: #ffffff;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.page-banner p:first-child {
+    color: #72b8ef;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.page-banner h2 {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.page-banner p:last-child {
+    color: #d5deea;
+}
+
+
+/* =========================================
+   Contact
+   ========================================= */
+
+.contact-section {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-information h2,
+.contact-form h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-information > p {
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    border-left: 4px solid #1e70b7;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 12px;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+#formMessage {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   Profile Page
+   ========================================= */
+
+.profile-section {
+    background-color: #07111f;
+    margin: 0;
+    min-height: 70vh;
+    padding: 70px 20px;
+}
+
+.profile-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 40px;
+    text-align: center;
+}
+
+.profile-picture {
+    border: 5px solid #1e70b7;
+    border-radius: 50%;
+    height: 250px;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    width: 250px;
+}
+
+.profile-card h2 {
+    color: #10233d;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.profile-card > p {
+    color: #1e70b7;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-information {
+    margin: 30px auto;
+    max-width: 700px;
+    text-align: left;
+}
+
+.profile-information h3 {
+    color: #1e70b7;
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.profile-information p {
+    margin-bottom: 10px;
+}
+
+.profile-quote {
+    background-color: #e9f2fa;
+    border-left: 5px solid #1e70b7;
+    border-radius: 5px;
+    font-size: 18px;
+    font-style: italic;
+    margin: 30px auto;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.transcript-link {
+    background-color: #1e70b7;
+    border-radius: 6px;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 12px 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.transcript-link:hover {
+    background-color: #15548b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   Transcript Page
+   ========================================= */
+
+.transcript-header {
+    background-color: #07111f;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.transcript-header h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.transcript-header h2 {
+    color: #72b8ef;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.transcript-logo {
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    height: 120px;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    width: 120px;
+}
+
+
+/* =========================================
+   Transcript Container
+   ========================================= */
+
+.transcript-container {
+    background-color: #f4f7fb;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 50px 25px;
+}
+
+
+/* =========================================
+   Student Information
+   ========================================= */
+
+.student-information {
+    background-color: #ffffff;
+    border: 3px double #10233d;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 25px;
+}
+
+.student-information h3 {
+    color: #10233d;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.student-information p {
+    margin-bottom: 10px;
+}
+
+
+/* Student Name Cell/Area */
+
+.student-name {
+    background-color: #d7ebfa;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 4px 10px;
+}
+
+
+/* =========================================
+   Transcript Sections
+   ========================================= */
+
+.transcript-section {
+    background-color: #ffffff;
+    border: 3px double #10233d;
+    border-radius: 8px;
+    margin: 30px 0;
+    overflow-x: auto;
+    padding: 25px;
+}
+
+.transcript-section h3 {
+    color: #10233d;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   Transcript Tables
+   ========================================= */
+
+.transcript-table {
+    border: 3px double #10233d;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.transcript-table th {
+    background-color: #10233d;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+}
+
+.transcript-table td {
+    border: 1px solid #b8c2cc;
+    padding: 12px;
+    text-align: center;
+}
+
+.transcript-table tr:nth-child(even) {
+    background-color: #f0f5fa;
+}
+
+.transcript-table tr:hover {
+    background-color: #e1edf7;
+}
+
+
+/* =========================================
+   GPA
+   ========================================= */
+
+.gpa {
+    background-color: #e9f2fa;
+    border-left: 5px solid #1e70b7;
+    margin-top: 20px;
+    padding: 12px 15px;
+}
+
+
+/* =========================================
+   Academic Summary
+   ========================================= */
+
+.academic-summary {
+    background-color: #ffffff;
+    border: 3px double #10233d;
+    border-radius: 8px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.academic-summary h3 {
+    color: #10233d;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.academic-summary p {
+    border-bottom: 1px solid #d5dce3;
+    padding: 10px 0;
+}
+
+
+/* =========================================
+   Transcript Footer
+   ========================================= */
+
+.transcript-footer {
+    background-color: #07111f;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.transcript-footer p {
+    margin-bottom: 8px;
+}
+
+.transcript-footer p:last-child {
+    color: #b9c5d6;
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   Transcript Responsive Design
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .transcript-header h1 {
+        font-size: 28px;
+    }
+
+    .transcript-header h2 {
+        font-size: 18px;
+    }
+
+    .transcript-logo {
+        height: 100px;
+        width: 100px;
+    }
+
+    .transcript-container {
+        padding: 30px 10px;
+    }
+
+    .transcript-section,
+    .student-information,
+    .academic-summary {
+        padding: 15px;
+    }
+
+    .transcript-table th,
+    .transcript-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+}
+
+
+/* =========================================
+   Footer
+   ========================================= */
+
+.footer {
+    background-color: #07111f;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.footer-content h3 {
+    margin-bottom: 10px;
+}
+
+.footer-content a {
+    color: #b9c5d6;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-content a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    border-top: 1px solid #26364a;
+    color: #b9c5d6;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        flex-basis: auto;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    .header-text h1 {
+        font-size: 24px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation a {
+        padding: 12px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 35px;
+    }
+
+    .hero-image img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .card-container,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content img {
+        height: 250px;
+        width: 100%;
+    }
+
+    .page-banner h2 {
+        font-size: 35px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .profile-section {
+        padding: 40px 15px;
+    }
+
+    .profile-card {
+        padding: 25px 20px;
+    }
+
+    .profile-picture {
+        height: 200px;
+        width: 200px;
+    }
+
+    .profile-card h2 {
+        font-size: 28px;
+    }
+
+    .profile-information {
+        text-align: left;
+    }
+
+}
